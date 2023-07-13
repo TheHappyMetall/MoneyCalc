@@ -1,2 +1,2 @@
 # MoneyCalc
-Проект доступен по ссылве: https://thehappymetall.github.io/MoneyCalc/
+Проект доступен по ссылке: https://thehappymetall.github.io/MoneyCalc/
