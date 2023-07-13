@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>###</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="calc-wrapper">
+    <div class="one-month-form calc-form">
+      <div class="title-underline-cont">
+        <span class="title-underline">Расчет на месяц</span>
+      </div>
+      <div class="calc-text">Дата получения денег</div>
+      <input type="date" class="date-input input" id="one-month-payday"/>
+      <div class="calc-text">Сумма</div>
+      <input type="number" class="number-input input" id="one-month-payday-amount"  />
+      <div class="btn-cont">
+        <button type="button" class="result-btn one-month-btn" id="one-month-show-result-btn">
+          Рассчитать
+        </button>
+      </div>
+    </div>
+    
+      <div class="data-range-form calc-form">
+        <div class="title-underline-cont">
+          <span class="title-underline">Диапазон дат</span>
+        </div>
+        <div class="calc-text">Дата получения денег</div>
+        <input type="date" class="date-input input" id="data-range-payday"/>
+        <div class="calc-text">по</div>
+        <input type="date" class="date-input input" id="data-range-end"/>
+        <div class="calc-text">Сумма</div>
+        <input type="number" class="number-input input" id="data-range-payday-amount"  />
+      <div class="btn-cont">
+        <button type="button" class="result-btn data-range-btn" id="data-range-show-result-btn">
+          Рассчитать
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="output-result-area">
+    <div id="calc-description"></div>
+    <div id="result">Результат вычислений</div>
+  </div>
+
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>

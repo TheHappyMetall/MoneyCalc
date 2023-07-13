@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "Nunito";
+  src: url(fonts/Nunito.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito";
+}
+
+:root {
+  --darkblue: #221831;
+  --blue: #465779;
+  --white: #d3d7e7;
+  --whitetprnt: rgba(211, 215, 231, 0.8);
+}
+
+body {
+  background: var(--darkblue);
+  color: var(--white);
+}
+
+.calc-wrapper {
+  padding: 20px 5vh;
+  display: grid;
+  place-items: center;
+  gap: 20px;
+}
+
+.calc-form {
+  text-align: center;
+  padding: 35px;
+  border: 2px solid var(--white);
+  border-radius: 5px;
+  width: fit-content;
+}
+
+
+.title-underline-cont {
+  margin-bottom: 20px;
+}
+
+.title-underline {
+  padding-bottom: 2px;
+  font-size: 1.3em;
+  position: relative;
+}
+
+.title-underline::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--white);
+}
+
+.input {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+  padding: 7px 9px;
+  border-radius: 5px;
+  height: 38px;
+}
+
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+
+.btn-cont {
+  margin-top: 25px;
+}
+
+.calc-text {
+  margin: 10px 0;
+}
+
+
+.result-btn {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.result-btn:hover {
+  color: var(--whitetprnt);
+}
+
+#output-result-area {
+  position: fixed;
+  width: 288px; 
+  left: 50vw;
+  transform: translateX(-50%);
+  bottom: 20px;
+  height: fit-content;
+  background: var(--white);
+  color: var(--darkblue);
+  padding: 10px;
+  font-size: 1.1em;
+  outline: 2px dashed var(--darkblue);
+  outline-offset: -3px;
+  text-align: center;
+}
+
+.shown {
+  animation: shownAnimating .6s linear;
+}
+
+@keyframes shownAnimating {
+  50% {
+    bottom: -112px;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 20px;
+    opacity: 1;
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+    .calc-form {
+        width: 80%;
+    }
+    .input {
+        width: 100%;
+    }
+    #output-result-area {
+        width: 80%;
+    }
+}
